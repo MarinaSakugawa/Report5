@@ -2,11 +2,13 @@ package jp.ac.uryukyu.ie.e235724;
 
 public class Main {
     public static void main(String[] args){
-        //条件1: String型変数 str を宣言し，初期値として null を代入する．
-        String str = null;
-
-        //条件2: str.length() の内容を表示しようとする．
-        System.out.println(str.length());
+        try{
+            String str = null;
+            System.out.println(str.length());
+        }catch(NullPointerException n){
+            System.out.println("Error : NullPointerException");
+            System.out.println(n.getMessage());
+        }
 
     }
     
